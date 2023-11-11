@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/lsa-learning/static/css/main.34e40322.css",
+    "main.js": "/lsa-learning/static/js/main.c9f8ab95.js",
+    "index.html": "/lsa-learning/index.html",
+    "static/media/back.svg": "/lsa-learning/static/media/back.448682c6a60aa397db2a68ad1f5b9903.svg",
+    "static/media/home.svg": "/lsa-learning/static/media/home.0e23d758a37f5f96e39a145774f85770.svg",
+    "main.34e40322.css.map": "/lsa-learning/static/css/main.34e40322.css.map",
+    "main.c9f8ab95.js.map": "/lsa-learning/static/js/main.c9f8ab95.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.34e40322.css",
+    "static/js/main.c9f8ab95.js"
+  ]
+}
