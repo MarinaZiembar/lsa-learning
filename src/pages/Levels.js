@@ -16,7 +16,7 @@ function Levels(props) {
             {levels.map((level,i) => (
                 <Card 
                     type="level"
-                    title={`Nivel ${level.level}`} 
+                    title={`${level.title}`} 
                     key={i} 
                     onClick={() => handleClick(level)}
                 />

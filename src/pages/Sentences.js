@@ -12,19 +12,31 @@ function Sentences(props) {
 
     const sentenceRandomizer = (level) => {
         let words = [];
-        for (let index = 0; index < 6; index++) {
-            const selectedLevel = levels.find((item) => item.level == level);
-            const topicIndex = Math.floor(Math.random() * selectedLevel?.topics?.length);
-            const selectedTopic = selectedLevel?.topics[topicIndex];
-            if(selectedTopic?.content){
-                const wordIndex = Math.floor(Math.random() * selectedTopic?.content?.length);
-                words = [...words, selectedTopic?.content[wordIndex]];
-            }else{
-                const randomNumber = Math.floor(Math.random() * 100);
-                words = [...words, randomNumber];
+        if(level == 1){
+            for (let index = 0; index < 6; index++) {
+                const selectedLevel = levels.find((item) => item.level == level);
+                const topicIndex = Math.floor(Math.random() * selectedLevel?.topics?.length);
+                const selectedTopic = selectedLevel?.topics[topicIndex];
+                if(selectedTopic.title == "oraciones"){
+                    words = selectedTopic.content;
+                }else{
+                    if(selectedTopic?.content){
+                        const wordIndex = Math.floor(Math.random() * selectedTopic?.content?.length);
+                        words = [...words, selectedTopic?.content[wordIndex]];
+                    }else{
+                        const randomNumber = Math.floor(Math.random() * 100);
+                        words = [...words, randomNumber];
+                    }
+                }
             }
+           setSentence(words);
+        }else{
+            const selectedLevel = levels?.find((item) => item.level == level);
+            const selectedTopic = selectedLevel?.topics.find((item) => item.title == "Oraciones");
+            const selectedContent = selectedTopic?.content;
+            const selectedSentenceIndex = Math.floor(Math.random() * selectedContent?.length);
+            setSentence([selectedContent[selectedSentenceIndex]]);
         }
-       setSentence(words);
     }
 
     useEffect(() => {

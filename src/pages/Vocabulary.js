@@ -20,7 +20,7 @@ function Vocabulary(props) {
                 const wordIndex = Math.floor(Math.random() * selectedTopic?.content?.length);
                 setWord(selectedTopic?.content[wordIndex]);
             }else{
-                const randomNumber = Math.floor(Math.random() * 100);
+                const randomNumber = Math.floor(Math.random() * 1000000);
                 setWord(randomNumber);
             }
         }else{
